@@ -158,28 +158,11 @@ section {
     color: #ffffff;
 }
 
-.service{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
-    padding:50px 0;
-    border-top:1px solid rgba(255,255,255,.2);
-    transition: .4s ease;
-}
-
 .service-number{
     font-size:70px;
     color:#b7f9ff;
     transition: .4s ease;
     width:90px;
-}
-
-.service img{
-    width:280px;
-    height:170px;
-    object-fit:cover;
-    border-radius:10px;
 }
 
 .service-info{
@@ -194,10 +177,6 @@ section {
 .service-info p{
     color:#19254a;
     font-size:20px;
-}
-
-.arrow{
-    font-size:60px;
 }
 
 .service img {
@@ -219,9 +198,14 @@ section {
     transition: .4s ease;
 }
 
-.service {
-    border-top: 1px solid rgba(255,255,255,.2);
-    transition: .4s ease;
+.service{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    padding:50px 0;
+    border-top:1px solid rgba(255,255,255,.2);
+    transition:.4s ease;
 }
 
 .service:hover {
@@ -454,4 +438,139 @@ section {
 .footer-item a:hover{
     color:#0779FF;
     transform:translateX(8px);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 992px){
+    section{
+        padding: 80px 30px;
+    }
+    .hero{
+        transform: none;
+        min-height: 90vh;
+    }
+    h1{
+        font-size: clamp(70px, 15vw, 120px);
+    }
+    .portafolio{
+        transform: none;
+        height: auto;
+        padding: 60px 0;
+    }
+    .marquee-content{
+        font-size: 20vw;
+    }
+    .about{
+        flex-direction: column;
+        gap: 60px;
+    }
+    .about-image,
+    .about-content{
+        width: 100%;
+        max-width: 100%;
+    }
+    .about-image img{
+        height: auto;
+    }
+    .about h2{
+        font-size: clamp(50px, 10vw, 80px);
+    }
+    .about-description p{
+        font-size: 20px;
+    }
+    .service{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+    .service img{
+        width: 100%;
+        height: 240px;
+    }
+    .service-info h2{
+        font-size: 50px;
+    }
+    .service-number{
+        width: auto;
+    }
+    .arrow{
+        align-self: flex-end;
+    }
+    .experience-item{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+    .experience-image{
+        width: 100%;
+        height: 250px;
+    }
+    .experience-info h2{
+        font-size: 45px;
+    }
+    .experience-number{
+        width: auto;
+    }
+    .footer{
+        min-height: auto;
+    }
+    .footer-info{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer-bottom{
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 576px){
+    section{
+        padding: 60px 20px;
+    }
+    h1{
+        font-size: clamp(50px, 18vw, 80px);
+    }
+    .location,
+    .skills{
+        font-size: 15px;
+    }
+    .email{
+        font-size: 13px;
+    }
+    .marquee-content{
+        font-size: 24vw;
+    }
+    .about h2{
+        font-size: 42px;
+    }
+    .about-description p{
+        font-size: 18px;
+    }
+    .service-info h2,
+    .experience-info h2{
+        font-size: 34px;
+    }
+    .service-info p,
+    .experience-info p{
+        font-size: 18px;
+    }
+    .service img,
+    .experience-image{
+        height: 200px;
+    }
+    .footer-header h2{
+        font-size: 60px;
+    }
+    .footer-item a{
+        font-size: 18px;
+        word-break: break-word;
+    }
+    .footer-bottom{
+        font-size: 14px;
+    }
 }
