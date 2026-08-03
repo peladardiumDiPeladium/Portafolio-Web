@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum vitae</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+<div class="image-modal" id="imageModal" onclick="closeImage()">
+<img id="modalImage">
+</div>
+
+<script>
+function openImage(img){
+  let modal = document.getElementById("imageModal");
+  let modalImg = document.getElementById("modalImage");
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+  setTimeout(()=>{
+    modal.classList.add("active");
+  },10);
+}
+
+function closeImage(){
+  let modal = document.getElementById("imageModal");
+  modal.classList.remove("active");
+  setTimeout(()=>{
+  modal.style.display="none";
+  },400);
+}
+
+</script>
+<body>
+  <main>
+    <section class="hero">
+      <p class="location">RIO GRANDE, ARGENTINA</p>
+      <p class="email">Leonelrodrigoponce@gmail.com</p>
+      <h1>LEONEL PONCE</h1>
+      <p class="skills">Hardware • Software • Desarrollo Web • Edición</p>
+</section>
+
+<section class="portafolio">
+  <div class="marquee">
+    <div class="marquee-content">
+      PORTAFOLIO WEB PORTAFOLIO WEB&nbsp;&nbsp;&nbsp;
+    </div>
+</section>
+    <section class="about">
+    <div class="about-image">
+        <img src="imgyo.jpg" alt="Leonel Ponce">
+    </div>
+<div class="about-content">
+<p class="number">01 / SOBRE MI</p>
+<h2>
+  LEONEL R0DRIGO <br>
+  PONCE
+</h2>
+<div class="about-description">
+<p>
+  Actualmente curso la <span>Tecnicatura en Informática</span>
+  en el <span>Colegio Provincial Dr. Ernesto Guevara.</span>
+</p>
+ <p>
+   Me apasiona el <span>hardware</span>, el
+  <span>software</span> y la
+  <span>edición de video</span>,
+  mientras continúo desarrollando
+  mis habilidades en
+  <span>HTML y CSS.</span>
+</p>
+<p>
+  Siempre busco
+  <span>aprender</span> nuevas tecnologías,
+  resolver problemas y crear proyectos
+  <span>que me permitan seguir creciendo.</span>
+</p>
+</div>
+</section>
+<section class="services">
+<p class="number">02 / QUE HAGO</p>
+<div class="service">
+  <span class="service-number">01</span>
+  <img src="hardware.jpg" alt="Hardware">
+  <div class="service-info">
+    <h2>HARDWARE</h2>
+    <p>Diagnóstico · Armado · Mantenimiento · Optimización</p>
+  </div>
+  <span class="arrow">→</span>
+  </div>
+<div class="service">
+  <span class="service-number">02</span>
+    <img src="software.jpg" alt="Software">
+  <div class="service-info">
+  <h2>SOFTWARE</h2>
+   <p>Windows · Solución de problemas · Configuración</p>
+  </div>
+    <span class="arrow">→</span>
+  </div>
+  <div class="service">
+    <span class="service-number">03</span>
+    <img src="web.jpg" alt="Desarrollo Web">
+    <div class="service-info">
+      <h2>DESARROLLO WEB</h2>
+      <p>HTML · CSS · Aprendiendo JavaScript</p>
+    </div>
+    <span class="arrow">→</span>
+  </div>
+  <div class="service">
+    <span class="service-number">04</span>
+    <img src="video.jpg" alt="Edición de Video">
+    <div class="service-info">
+      <h2>EDICIÓN DE VIDEO</h2>
+      <p>Vegas Pro 21 · Montaje · Producción audiovisual</p>
+      </div>
+    <span class="arrow">→</span>
+  </div>
+</section>
+
+<section class="experience">
+<p class="number">03 / EXPERIENCIA</p>
+  <div class="experience-item">
+    <span class="experience-number">
+      01
+    </span>
+  <div class="experience-info">
+<h2>
+  PRACTICAS<br>
+  PROFESIONALIZANTES
+</h2>
+<p>
+  Experiencia realizada en Mirgor,
+  participando en un entorno laboral real,
+  aplicando conocimientos técnicos,
+  responsabilidad y trabajo en equipo.
+  </p>
+</div>
+<div class="experience-image">
+  <img 
+  src="practicas.jpg" 
+  alt="Practicas Profesionalizantes"
+  onclick="openImage(this)">
+</div>
+    <span class="arrow">
+      →
+    </span>
+</div>
+  <div class="experience-item">
+    <span class="experience-number">
+      02
+    </span>
+  <div class="experience-info">
+  <h2>
+  CAPACITACIÓN<br>
+  MIRGOR
+  </h2>
+<p>
+  Capacitación como operario de línea,
+  incorporando conocimientos sobre procesos
+  industriales, organización y trabajo grupal.
+</p>
+</div>
+<div class="experience-image">
+  <img src="capacitacion.jpg" onclick="openImage(this)">
+</div>
+<span class="arrow">
+    →
+</span>
+</div>
+
+<div class="experience-item">
+  <span class="experience-number">
+  03
+  </span>
+  <div class="experience-info">
+  <h2>
+  PIRATERÍA<br>
+  DIGITAL
+  </h2>
+<p>
+  Participación en un stand educativo realizado
+  en Mirgor sobre piratería digital,
+  concientización y seguridad informática.
+</p>
+</div>
+<div class="experience-image">
+<img src="pirateria.jpg" onclick="openImage(this)">
+</div>
+  <span class="arrow">
+   →
+  </span>
+</div>
+</section>
+
+<footer class="footer">
+  <div class="footer-header">
+    <p class="number">04 / CONTACTO</p>
+      <h2>
+      HABLEMOS
+      </h2>
+    </div>
+  <div class="footer-info">
+    <div class="footer-item">
+      <p>CORREO ELECTRÓNICO</p>
+        <a href="mailto:LeonelRodrigoPonce@gmail.com">
+          LeonelRodrigoPonce@gmail.com
+        </a>
+  </div>
+  <div class="footer-item">
+    <p>TELÉFONO</p>
+    <a href="tel:+542964481354">
+    +54 2964 48 1354
+    </a>
+  </div>
+  <div class="footer-item">
+    <p>LINKEDIN</p>
+      <a href="https://www.linkedin.com/in/leonel-rodrigo-ponce-42337b426/" target="_blank">
+        Leonel Rodrigo Ponce
+      </a>
+  </div>
+  <div class="footer-bottom">
+    <span>
+    Desarrollado por Leonel Ponce - Programación VI
+    </span>
+    <span>
+    2026
+    </span>
+  </div>
+</footer>
+    </main>
+  </body>
+</html>
