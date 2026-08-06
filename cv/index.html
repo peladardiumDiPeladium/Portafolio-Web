@@ -13,29 +13,9 @@
     />
   </head>
 <div class="image-modal" id="imageModal" onclick="closeImage()">
-<img id="modalImage">
+<img id="modalImage"> 
 </div>
 
-<script>
-function openImage(img){
-  let modal = document.getElementById("imageModal");
-  let modalImg = document.getElementById("modalImage");
-  modal.style.display = "flex";
-  modalImg.src = img.src;
-  setTimeout(()=>{
-    modal.classList.add("active");
-  },10);
-}
-
-function closeImage(){
-  let modal = document.getElementById("imageModal");
-  modal.classList.remove("active");
-  setTimeout(()=>{
-  modal.style.display="none";
-  },400);
-}
-
-</script>
 <body>
   <main>
     <section class="hero">
@@ -53,7 +33,7 @@ function closeImage(){
 </section>
     <section class="about">
     <div class="about-image">
-        <img src="imgyo.jpg" alt="Leonel Ponce">
+        <img src="imgyo.jpg" alt="Leonel Ponce">  
     </div>
 <div class="about-content">
 <p class="number">01 / SOBRE MI</p>
@@ -85,41 +65,74 @@ function closeImage(){
 <section class="services">
 <p class="number">02 / QUE HAGO</p>
 <div class="service">
-  <span class="service-number">01</span>
-  <img src="hardware.jpg" alt="Hardware">
+<div class="service-header">
+<span class="service-number">01</span>
+<img src="hardware.jpg" alt="Hardware">
   <div class="service-info">
     <h2>HARDWARE</h2>
     <p>Diagnóstico · Armado · Mantenimiento · Optimización</p>
   </div>
-  <span class="arrow">→</span>
-  </div>
+<span class="arrow">→</span>
+</div>
+<div class="service-description">
+  <p>
+  Me destaco en el diagnóstico y reparación de equipos,
+  armado de computadoras, mantenimiento preventivo y
+  optimización del rendimiento del hardware.
+  </p>
+</div>
+</div>
 <div class="service">
-  <span class="service-number">02</span>
-    <img src="software.jpg" alt="Software">
-  <div class="service-info">
+<div class="service-header">
+<span class="service-number">02</span>
+<img src="software.jpg" alt="Software">
+<div class="service-info">
   <h2>SOFTWARE</h2>
-   <p>Windows · Solución de problemas · Configuración</p>
-  </div>
-    <span class="arrow">→</span>
-  </div>
-  <div class="service">
-    <span class="service-number">03</span>
-    <img src="web.jpg" alt="Desarrollo Web">
-    <div class="service-info">
-      <h2>DESARROLLO WEB</h2>
-      <p>HTML · CSS · Aprendiendo JavaScript</p>
-    </div>
-    <span class="arrow">→</span>
-  </div>
-  <div class="service">
-    <span class="service-number">04</span>
-    <img src="video.jpg" alt="Edición de Video">
-    <div class="service-info">
-      <h2>EDICIÓN DE VIDEO</h2>
-      <p>Vegas Pro 21 · Montaje · Producción audiovisual</p>
-      </div>
-    <span class="arrow">→</span>
-  </div>
+  <p>Windows · Solución de problemas · Configuración</p>
+</div>
+<span class="arrow">→</span>
+</div>
+<div class="service-description">
+<p>
+  Tengo experiencia instalando sistemas operativos,
+  configurando equipos y solucionando problemas de Windows.
+</p>
+</div>
+</div>
+<div class="service">
+<div class="service-header">
+<span class="service-number">03</span>
+<img src="web.jpg" alt="Desarrollo Web">
+<div class="service-info">
+  <h2>DESARROLLO WEB</h2>
+  <p>HTML · CSS · Aprendiendo JavaScript</p>
+</div>
+<span class="arrow">→</span>
+</div>
+<div class="service-description">
+  <p>
+    Desarrollo sitios web modernos utilizando HTML y CSS,
+    priorizando un diseño limpio, responsive y atractivo.
+  </p>
+</div>
+</div>
+<div class="service">
+<div class="service-header">
+<span class="service-number">04</span>
+<img src="video.jpg" alt="Edición de Video">
+<div class="service-info">
+  <h2>EDICIÓN DE VIDEO</h2>
+  <p>Vegas Pro 21 · Montaje · Producción audiovisual</p>
+</div>
+<span class="arrow">→</span>
+</div>
+<div class="service-description">
+  <p>
+    Realizo edición y montaje audiovisual cuidando el ritmo,
+    la estética y la calidad visual de cada proyecto.
+  </p>
+</div>  
+</div>
 </section>
 
 <section class="experience">
@@ -232,6 +245,45 @@ function closeImage(){
     </span>
   </div>
 </footer>
-    </main>
-  </body>
+</main>
+<script>
+function openImage(img){
+  let modal = document.getElementById("imageModal");
+  let modalImg = document.getElementById("modalImage");
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+  setTimeout(()=>{
+    modal.classList.add("active");
+  },10);
+}
+function closeImage(){
+  let modal = document.getElementById("imageModal");
+  modal.classList.remove("active");
+  setTimeout(()=>{
+    modal.style.display="none";
+  },400);
+}
+</script>
+<script>
+document.querySelectorAll(".service-header").forEach(header=>{
+
+    header.addEventListener("click",()=>{
+
+        const service = header.parentElement;
+
+        document.querySelectorAll(".service").forEach(item=>{
+
+            if(item!==service){
+                item.classList.remove("active");
+            }
+
+        });
+
+        service.classList.toggle("active");
+
+    });
+
+});
+</script>
+</body>
 </html>
