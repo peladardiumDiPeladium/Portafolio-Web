@@ -703,3 +703,100 @@ section {
     font-size: 16px;
   }
 }
+/* ========================= */
+/* FORMULARIO DE CONTACTO    */
+/* ========================= */
+
+.contact-form-container {
+  margin: 50px auto 0 auto; /* Centra el contenedor horizontalmente */
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 600px;
+  width: 90%;               /* Asegura que sea responsivo en pantallas pequeñas */
+  text-align: center;       /* Centra los títulos y botones dentro del contenedor */
+}
+
+.contact-form-container h3 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #b7f9ff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: left;         /* Mantiene las etiquetas (labels) y campos alineados a la izquierda */
+}
+
+.form-group label {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: #19254a;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;   /* Garantiza que el padding no desborde los campos */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #b7f9ff;
+}
+
+.submit-btn {
+  font-family: "Anton", sans-serif;
+  font-size: 18px;
+  padding: 12px 30px;
+  background-color: #19254a;
+  color: #b7f9ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0d152d;
+}
+
+.form-response {
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff; /* Fondo blanco para las cajas de texto */
+  color: #333333;           /* Color de texto oscuro para que se lea bien */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Cambia el color del texto de sugerencia (placeholder) */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #888888;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #19254a;     /* Borde azul al hacer clic en la caja */
+}
